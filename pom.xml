@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.capgemini</groupId>
+	<artifactId>simple-lock-manager</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>Our release repo</name>
+			<url>http://artifactory.capgemini-psdu.com/artifactory/libs-release-local</url>
+		</repository>
+		<!-- Disallow deploy of snapshot versions -->
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast</artifactId>
+			<version>3.7</version>
+		</dependency>
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast</artifactId>
+			<classifier>tests</classifier>
+			<version>3.7</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+</project>
